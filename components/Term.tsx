@@ -1,5 +1,7 @@
 import React from 'react';
+import {FC} from 'react';
 import styles from '../styles/Home.module.sass';
-export default function Term(props: any) {
+const Term:FC<{children?: React.ReactNode}> = (props) => {
   return <span className={styles.code}>{props.children}</span>;
 }
+export default Term;

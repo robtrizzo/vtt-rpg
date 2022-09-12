@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
+import {FC} from 'react'
 import styles from '../styles/character-sheet.module.sass';
 
-export default function AbilityScoreCard({ ability }) {
+const AbilityScoreCard:FC<{ability: string}> = ({ ability }) => {
   return (
     <div className={styles.card}>
       <label htmlFor={ability}>
@@ -11,3 +12,5 @@ export default function AbilityScoreCard({ ability }) {
     </div>
   );
 }
+
+export default AbilityScoreCard;
