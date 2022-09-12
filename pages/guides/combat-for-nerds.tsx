@@ -1,5 +1,6 @@
 import styles from '../../styles/Home.module.sass';
 import Term from '../../components/Term';
+import React from 'react';
 export default function CombatForNerds() {
   return (
     <div className={styles.container}>

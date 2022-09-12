@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from '../../styles/Home.module.sass';
 export default function CharacterCreation() {
   return (
