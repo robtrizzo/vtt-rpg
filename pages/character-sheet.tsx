@@ -6,7 +6,11 @@ import styles from '../styles/Home.module.sass';
 import React from 'react';
 export default function CharacterSheet() {
   const [animate, setAnimate] = useState(false);
-  const handleAbilityScoreCardClick: () => void = () => setAnimate(true);
+  const [selectedAbilityScore, setSelectedAbilityScore] = useState('');
+  const handleAbilityScoreCardClick: (score: string) => void = (score) => {
+    setSelectedAbilityScore(score);
+    setAnimate(true);
+  };
   const handleSecondaryScoreCardClick: () => void = () => setAnimate(false);
 
   const [fileContent, setFileContent] = useState('');
@@ -49,7 +53,7 @@ export default function CharacterSheet() {
   ));
 
   return (
-    <main className={styles.main}>
+    <main className={styles.main} style={{ overflow: 'hidden' }}>
       <h1 className={styles.title}>Character Sheet</h1>
       <a href="/guides/character-creation">
         <h2>&larr; Back</h2>
@@ -65,11 +69,25 @@ export default function CharacterSheet() {
       <h2>{JSON.stringify(fileContent)}</h2>
 
       <div
-        className={`${styles.grid} ${characterSheetStyles.animate} ${
-          animate ? characterSheetStyles.slideLeft : ''
-        }`}
+        className={`${characterSheetStyles.panelWrapper} ${
+          characterSheetStyles.animate
+        } ${animate ? characterSheetStyles.slideLeft : ''}`}
       >
-        {formattedAbilityScores}
+        <div className={`${characterSheetStyles.panel}`}>
+          <div className={`${characterSheetStyles.grid} `}>
+            {formattedAbilityScores}
+          </div>
+        </div>
+        <div className={characterSheetStyles.panel}>
+          <h2
+            onClick={(e) => {
+              e.preventDefault();
+              setAnimate(false);
+            }}
+          >
+            &larr; {selectedAbilityScore}
+          </h2>
+        </div>
       </div>
     </main>
   );

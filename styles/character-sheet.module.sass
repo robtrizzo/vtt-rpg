@@ -33,7 +33,28 @@
         -moz-appearance: none
         appearance: none
 
+.grid
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    width: 100%
+
 .animate
     transition: transform 0.3s ease-in-out
 .slideLeft
-    transform: translateX(-100%)
+    transform: translateX(-2400px)
+
+.panelWrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    gap: 1600px
+    padding-left: 2400px
+.panel
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 800px
