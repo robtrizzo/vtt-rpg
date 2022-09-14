@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import AbilityScoreCard from '../components/AbilityScoreCard';
+import abilityScoreConfig from '../configs/abilityScores.content.json';
 import characterSheetStyles from '../styles/character-sheet.module.sass';
 import styles from '../styles/Home.module.sass';
 import React from 'react';
-export default function CharacterSheet() {
+import { FC } from 'react';
+const CharacterSheet: FC<{ abilityScoreConfig: any }> = ({
+  abilityScoreConfig,
+}) => {
   const [animate, setAnimate] = useState(false);
   const [selectedAbilityScore, setSelectedAbilityScore] = useState('');
   const handleAbilityScoreCardClick: (score: string) => void = (score) => {
@@ -79,27 +83,77 @@ export default function CharacterSheet() {
           </div>
         </div>
         <div className={characterSheetStyles.panel}>
+          <h1>
+            {selectedAbilityScore.charAt(0).toUpperCase() +
+              selectedAbilityScore.slice(1)}
+          </h1>
           <h2
             onClick={(e) => {
               e.preventDefault();
               setAnimate(false);
             }}
           >
-            &larr; {selectedAbilityScore}
+            &larr; All Ability Scores
           </h2>
+          <h3 style={{ color: '#e83e8c' }}>Secondary Scores</h3>
+          {Object.keys(abilityScoreConfig.secondaryScores).map((score: any) => {
+            let multiplier = 1;
+            return abilityScoreConfig.secondaryScores[
+              score
+            ].inputs.primaryScores.some(
+              (primaryScore: { score: string; multiplier: number }) => {
+                if (primaryScore.score === selectedAbilityScore) {
+                  multiplier = primaryScore.multiplier;
+                  return true;
+                }
+                return false;
+              }
+            ) ? (
+              <h4
+                style={multiplier >= 1 ? { color: 'green' } : { color: 'red' }}
+              >
+                {score}
+              </h4>
+            ) : (
+              ''
+            );
+          })}
+          <h3 style={{ color: '#e83e8c' }}>Resistances</h3>
+          {Object.keys(abilityScoreConfig.resists).map((score: any) => {
+            let multiplier = 1;
+            return abilityScoreConfig.resists[score].inputs.primaryScores.some(
+              (primaryScore: { score: string; multiplier: number }) => {
+                if (primaryScore.score === selectedAbilityScore) {
+                  multiplier = primaryScore.multiplier;
+                  return true;
+                }
+                return false;
+              }
+            ) ? (
+              <h4
+                style={multiplier >= 1 ? { color: 'green' } : { color: 'red' }}
+              >
+                {score}
+              </h4>
+            ) : (
+              ''
+            );
+          })}
         </div>
       </div>
     </main>
   );
-}
+};
+export default CharacterSheet;
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/hello');
-    const data = await res.json();
+    // const res = await fetch('http://localhost:3000/api/hello');
+    // const data = await res.json();
     return {
       props: {
-        data,
+        // data,
+        abilityScoreConfig,
       },
     };
   } catch (e) {

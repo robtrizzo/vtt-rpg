@@ -1,0 +1,305 @@
+{
+  "primaryScores": {
+    "vitality": {
+      "inputs": {}
+    },
+    "agility": {
+      "inputs": {}
+    },
+    "resolve": {
+      "inputs": {}
+    },
+    "intellect": {
+      "inputs": {}
+    },
+    "charisma": {
+      "inputs": {}
+    },
+    "luck": {
+      "inputs": {}
+    },
+    "strength": {
+      "inputs": {}
+    },
+    "coordination": {
+      "inputs": {}
+    },
+    "perception": {
+      "inputs": {}
+    },
+    "knowledge": {
+      "inputs": {}
+    },
+    "empathy": {
+      "inputs": {}
+    }
+  },
+  "secondaryScores": {
+    "reflexes": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "agility",
+            "multiplier": 1
+          },
+          {
+            "score": "coordination",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "speed": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "agility",
+            "multiplier": 1
+          },
+          {
+            "score": "strength",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "presence": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "charisma",
+            "multiplier": 1
+          },
+          {
+            "score": "strength",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "stealth": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "agility",
+            "multiplier": 1
+          },
+          {
+            "score": "intellect",
+            "multiplier": 1
+          },
+          {
+            "score": "perception",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "cunning": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "intellect",
+            "multiplier": 1
+          },
+          {
+            "score": "empathy",
+            "multiplier": 1
+          },
+          {
+            "score": "resolve",
+            "multiplier": 1
+          },
+          {
+            "score": "perception",
+            "multiplier": 1
+          }
+        ]
+      }
+    }
+  },
+  "resists": {
+    "fireResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "coldResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "electricityResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "acidResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "poisonResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "sonicResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          },
+          {
+            "score": "perception",
+            "multiplier": -1
+          }
+        ]
+      }
+    },
+    "negativeResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "resolve",
+            "multiplier": 1
+          },
+          {
+            "score": "empathy",
+            "multiplier": -1
+          }
+        ]
+      }
+    },
+    "positiveResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "resolve",
+            "multiplier": 1
+          },
+          {
+            "score": "empathy",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "psychicResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "resolve",
+            "multiplier": 1
+          },
+          {
+            "score": "intellect",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "divineResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "resolve",
+            "multiplier": 1
+          },
+          {
+            "score": "charisma",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "magicResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "resolve",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "bludgeoningResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          },
+          {
+            "score": "strength",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "piercingResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          },
+          {
+            "score": "coordination",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "slashingResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          },
+          {
+            "score": "strength",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "bleedResist": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "vitality",
+            "multiplier": 1
+          }
+        ]
+      }
+    }
+  }
+}
