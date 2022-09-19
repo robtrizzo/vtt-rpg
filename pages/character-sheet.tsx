@@ -6,6 +6,7 @@ import characterSheetStyles from '../styles/character-sheet.module.sass';
 import styles from '../styles/Home.module.sass';
 import React from 'react';
 import { FC } from 'react';
+import AbilityScoreFullDetailsCard from '../components/AbilityScoreFullDetailsCard';
 const CharacterSheet: FC<{ abilityScoreConfig: any }> = ({
   abilityScoreConfig,
 }) => {
@@ -70,7 +71,7 @@ const CharacterSheet: FC<{ abilityScoreConfig: any }> = ({
         style={{ backgroundColor: '#221b1e' }}
       />
 
-      <h2>{JSON.stringify(fileContent)}</h2>
+      {fileContent ? <h2>{JSON.stringify(fileContent)}</h2> : null}
 
       <div
         className={`${characterSheetStyles.panelWrapper} ${
@@ -82,64 +83,11 @@ const CharacterSheet: FC<{ abilityScoreConfig: any }> = ({
             {formattedAbilityScores}
           </div>
         </div>
-        <div className={characterSheetStyles.panel}>
-          <h1>
-            {selectedAbilityScore.charAt(0).toUpperCase() +
-              selectedAbilityScore.slice(1)}
-          </h1>
-          <h2
-            onClick={(e) => {
-              e.preventDefault();
-              setAnimate(false);
-            }}
-          >
-            &larr; All Ability Scores
-          </h2>
-          <h3 style={{ color: '#e83e8c' }}>Secondary Scores</h3>
-          {Object.keys(abilityScoreConfig.secondaryScores).map((score: any) => {
-            let multiplier = 1;
-            return abilityScoreConfig.secondaryScores[
-              score
-            ].inputs.primaryScores.some(
-              (primaryScore: { score: string; multiplier: number }) => {
-                if (primaryScore.score === selectedAbilityScore) {
-                  multiplier = primaryScore.multiplier;
-                  return true;
-                }
-                return false;
-              }
-            ) ? (
-              <h4
-                style={multiplier >= 1 ? { color: 'green' } : { color: 'red' }}
-              >
-                {score}
-              </h4>
-            ) : (
-              ''
-            );
-          })}
-          <h3 style={{ color: '#e83e8c' }}>Resistances</h3>
-          {Object.keys(abilityScoreConfig.resists).map((score: any) => {
-            let multiplier = 1;
-            return abilityScoreConfig.resists[score].inputs.primaryScores.some(
-              (primaryScore: { score: string; multiplier: number }) => {
-                if (primaryScore.score === selectedAbilityScore) {
-                  multiplier = primaryScore.multiplier;
-                  return true;
-                }
-                return false;
-              }
-            ) ? (
-              <h4
-                style={multiplier >= 1 ? { color: 'green' } : { color: 'red' }}
-              >
-                {score}
-              </h4>
-            ) : (
-              ''
-            );
-          })}
-        </div>
+        <AbilityScoreFullDetailsCard
+          primaryAbility={selectedAbilityScore}
+          abilityScoreConfig={abilityScoreConfig}
+          handleBackClick={() => setAnimate(false)}
+        />
       </div>
     </main>
   );
