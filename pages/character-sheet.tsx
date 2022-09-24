@@ -36,20 +36,9 @@ const CharacterSheet: FC<{ abilityScoreConfig: any }> = ({
       };
     }
   };
-
-  let formattedAbilityScores = [
-    'vitality',
-    'strength',
-    'agility',
-    'coordination',
-    'resolve',
-    'perception',
-    'intellect',
-    'knowledge',
-    'charisma',
-    'empathy',
-    'luck',
-  ].map((ability) => (
+  let formattedAbilityScores = Object.keys(
+    abilityScoreConfig.primaryScores
+  ).map((ability) => (
     <AbilityScoreCard
       key={ability}
       ability={ability}

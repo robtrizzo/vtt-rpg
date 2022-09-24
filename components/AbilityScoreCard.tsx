@@ -15,7 +15,9 @@ const AbilityScoreCard: FC<{
       }}
     >
       <label htmlFor={ability}>
-        {ability.charAt(0).toUpperCase() + ability.slice(1)}
+        {ability
+          .replace(/([A-Z])/g, ' $1')
+          .replace(/^./, (str) => str.toUpperCase())}
       </label>
       <input id={ability} type="number" defaultValue={0}></input>
     </div>

@@ -9,7 +9,7 @@
     "resolve": {
       "inputs": {}
     },
-    "intellect": {
+    "fluidIntelligence": {
       "inputs": {}
     },
     "charisma": {
@@ -27,10 +27,10 @@
     "perception": {
       "inputs": {}
     },
-    "knowledge": {
+    "crystalizedIntelligence": {
       "inputs": {}
     },
-    "empathy": {
+    "emotionalIntelligence": {
       "inputs": {}
     }
   },
@@ -85,7 +85,7 @@
             "multiplier": 1
           },
           {
-            "score": "intellect",
+            "score": "fluidIntelligence",
             "multiplier": 1
           },
           {
@@ -99,11 +99,11 @@
       "inputs": {
         "primaryScores": [
           {
-            "score": "intellect",
+            "score": "fluidIntelligence",
             "multiplier": 1
           },
           {
-            "score": "empathy",
+            "score": "emotionalIntelligence",
             "multiplier": 1
           },
           {
@@ -189,10 +189,6 @@
           {
             "score": "resolve",
             "multiplier": 1
-          },
-          {
-            "score": "empathy",
-            "multiplier": -1
           }
         ]
       }
@@ -202,10 +198,6 @@
         "primaryScores": [
           {
             "score": "resolve",
-            "multiplier": 1
-          },
-          {
-            "score": "empathy",
             "multiplier": 1
           }
         ]
@@ -219,7 +211,7 @@
             "multiplier": 1
           },
           {
-            "score": "intellect",
+            "score": "fluidIntelligence",
             "multiplier": 1
           }
         ]

@@ -25,10 +25,12 @@ const AbilityScoreFullDetailsCard: FC<{
       </h2>
       <AffectedScoresCard
         primaryAbility={primaryAbility}
+        headerText="Secondary Scores"
         abilities={abilityScoreConfig.secondaryScores}
       />
       <AffectedScoresCard
         primaryAbility={primaryAbility}
+        headerText="Resistances"
         abilities={abilityScoreConfig.resists}
       />
     </div>
