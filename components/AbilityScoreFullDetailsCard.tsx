@@ -13,7 +13,9 @@ const AbilityScoreFullDetailsCard: FC<{
       className={`${characterSheetStyles.panel} ${characterSheetStyles.abilityScoreFullDetailsCard}`}
     >
       <h1>
-        {primaryAbility.charAt(0).toUpperCase() + primaryAbility.slice(1)}
+        {primaryAbility
+          .replace(/([A-Z])/g, ' $1')
+          .replace(/^./, (str) => str.toUpperCase())}
       </h1>
       <h2
         onClick={(e) => {
