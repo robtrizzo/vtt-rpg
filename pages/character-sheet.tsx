@@ -10,13 +10,13 @@ import AbilityScoreFullDetailsCard from '../components/AbilityScoreFullDetailsCa
 const CharacterSheet: FC<{ abilityScoreConfig: any }> = ({
   abilityScoreConfig,
 }) => {
-  const [animate, setAnimate] = useState(false);
+  const [currentPanel, setCurrentPanel] = useState(0);
   const [selectedAbilityScore, setSelectedAbilityScore] = useState('');
   const handleAbilityScoreCardClick: (score: string) => void = (score) => {
     setSelectedAbilityScore(score);
-    setAnimate(true);
+    setCurrentPanel(1);
   };
-  const handleSecondaryScoreCardClick: () => void = () => setAnimate(false);
+  const handleSecondaryScoreCardClick: () => void = () => setCurrentPanel(0);
 
   const [fileContent, setFileContent] = useState('');
 
@@ -62,21 +62,28 @@ const CharacterSheet: FC<{ abilityScoreConfig: any }> = ({
 
       {fileContent ? <h2>{JSON.stringify(fileContent)}</h2> : null}
 
-      <div
-        className={`${characterSheetStyles.panelWrapper} ${
-          characterSheetStyles.animate
-        } ${animate ? characterSheetStyles.slideLeft : ''}`}
-      >
-        <div className={`${characterSheetStyles.panel}`}>
-          <div className={`${characterSheetStyles.grid} `}>
-            {formattedAbilityScores}
+      <div className={`${characterSheetStyles.slidingPanel}`}>
+        <div
+          className={`${characterSheetStyles.slidingPanelInner}`}
+          style={{ transform: `translateX(${currentPanel * -100}%)` }}
+        >
+          <div className={`${characterSheetStyles.slidingPanelItem}`}>
+            <div className={`${characterSheetStyles.grid}`}>
+              {formattedAbilityScores}
+            </div>
           </div>
+          <div
+            className={`${characterSheetStyles.slidingPanelItem}`}
+            style={{ height: '70vh' }}
+          >
+            <AbilityScoreFullDetailsCard
+              primaryAbility={selectedAbilityScore}
+              abilityScoreConfig={abilityScoreConfig}
+              handleBackClick={() => setCurrentPanel(0)}
+            />
+          </div>
+          <div className={`${characterSheetStyles.slidingPanelItem}`}>Test</div>
         </div>
-        <AbilityScoreFullDetailsCard
-          primaryAbility={selectedAbilityScore}
-          abilityScoreConfig={abilityScoreConfig}
-          handleBackClick={() => setAnimate(false)}
-        />
       </div>
     </main>
   );

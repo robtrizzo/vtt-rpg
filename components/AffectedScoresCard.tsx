@@ -28,7 +28,7 @@ const AffectedScoresCard: FC<{
               >
                 {score
                   .replace(/([A-Z])/g, ' $1')
-                  .replace(/^./, (str) => str.toUpperCase())}
+                  .replace(/^./, (str: string) => str.toUpperCase())}
               </h4>
             </div>
           ) : (

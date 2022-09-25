@@ -9,9 +9,7 @@ const AbilityScoreFullDetailsCard: FC<{
   handleBackClick: () => void;
 }> = ({ primaryAbility, abilityScoreConfig, handleBackClick }) => {
   return (
-    <div
-      className={`${characterSheetStyles.panel} ${characterSheetStyles.abilityScoreFullDetailsCard}`}
-    >
+    <div className={`${characterSheetStyles.abilityScoreFullDetailsCard}`}>
       <h1>
         {primaryAbility
           .replace(/([A-Z])/g, ' $1')

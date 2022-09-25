@@ -19,7 +19,14 @@ const AbilityScoreCard: FC<{
           .replace(/([A-Z])/g, ' $1')
           .replace(/^./, (str) => str.toUpperCase())}
       </label>
-      <input id={ability} type="number" defaultValue={0}></input>
+      <input
+        id={ability}
+        type="number"
+        defaultValue={0}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      ></input>
     </div>
   );
 };
