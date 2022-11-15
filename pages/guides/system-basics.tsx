@@ -9,6 +9,12 @@ export default function SystemBasics() {
           {' '}
           <h2>&larr; Home</h2>{' '}
         </a>
+        <div className={styles.grid}>
+          <a href="/guides/making-a-check" className={styles.card}>
+            <h2>Making a Check &rarr;</h2>
+            <p>Learn how to make a check and how to interpret the results.</p>
+          </a>
+        </div>
       </main>
     </div>
   );
