@@ -1,37 +1,37 @@
 {
   "primaryScores": {
-    "vitality": {
-      "inputs": {}
-    },
     "agility": {
-      "inputs": {}
-    },
-    "resolve": {
-      "inputs": {}
-    },
-    "fluidIntelligence": {
-      "inputs": {}
+      "score": 1
     },
     "charisma": {
-      "inputs": {}
-    },
-    "luck": {
-      "inputs": {}
-    },
-    "strength": {
-      "inputs": {}
+      "score": 1
     },
     "coordination": {
-      "inputs": {}
-    },
-    "perception": {
-      "inputs": {}
+      "score": 1
     },
     "crystalizedIntelligence": {
-      "inputs": {}
+      "score": 1
     },
     "emotionalIntelligence": {
-      "inputs": {}
+      "score": 1
+    },
+    "fluidIntelligence": {
+      "score": 1
+    },
+    "luck": {
+      "score": 1
+    },
+    "perception": {
+      "score": 1
+    },
+    "resolve": {
+      "score": 1
+    },
+    "strength": {
+      "score": 1
+    },
+    "vitality": {
+      "score": 1
     }
   },
   "secondaryScores": {
@@ -112,6 +112,42 @@
           },
           {
             "score": "perception",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "physicalEndurance": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "strength",
+            "multiplier": 1
+          },
+          {
+            "score": "resolve",
+            "multiplier": 1
+          },
+          {
+            "score": "agility",
+            "multiplier": 1
+          }
+        ]
+      }
+    },
+    "mentalEndurance": {
+      "inputs": {
+        "primaryScores": [
+          {
+            "score": "charisma",
+            "multiplier": 1
+          },
+          {
+            "score": "resolve",
+            "multiplier": 1
+          },
+          {
+            "score": "emotionalIntelligence",
             "multiplier": 1
           }
         ]

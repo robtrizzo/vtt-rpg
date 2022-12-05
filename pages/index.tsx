@@ -22,12 +22,12 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a href="/guides/system-basics" className={styles.card}>
-            <h2>System Basics &rarr;</h2>
+            <h2>System Basics 🤔 &rarr;</h2>
             <p>Find an overview of how the sytem works</p>
           </a>
 
           <a href="/guides/character-creation" className={styles.card}>
-            <h2>Character Creation &rarr;</h2>
+            <h2>Character Creation 🛠️ &rarr;</h2>
             <p>
               Learn how to create a character with a step-by-step example and
               guide
@@ -35,14 +35,14 @@ export default function Home() {
           </a>
 
           <a href="/guides/combat" className={styles.card}>
-            <h2>Combat &rarr;</h2>
+            <h2>Combat ⚔️ &rarr;</h2>
             <p>
               Learn the rules and mechanics of combat, damage, and defenses.
             </p>
           </a>
 
           <a href="/guides/running-the-game" className={styles.card}>
-            <h2>Running the Game &rarr;</h2>
+            <h2>Running the Game 🎲 &rarr;</h2>
             <p>
               Learn how to introduce the game to your players and run a session.
             </p>

@@ -20,6 +20,8 @@ const CharacterSheet: FC<{ abilityScoreConfig: any }> = ({
 
   const [fileContent, setFileContent] = useState('');
 
+  console.log(abilityScoreConfig);
+
   const fileUploadHandler = (
     event: React.ChangeEvent<HTMLInputElement>
   ): void => {
