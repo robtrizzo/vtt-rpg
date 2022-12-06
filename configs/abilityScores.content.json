@@ -1,37 +1,37 @@
 {
   "primaryScores": {
     "agility": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "charisma": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "coordination": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "crystalizedIntelligence": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "emotionalIntelligence": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "fluidIntelligence": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "luck": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "perception": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "resolve": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "strength": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     },
     "vitality": {
-      "score": 1
+      "score": [3, 0, 0, 0]
     }
   },
   "secondaryScores": {
@@ -40,11 +40,11 @@
         "primaryScores": [
           {
             "score": "agility",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "coordination",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -54,11 +54,11 @@
         "primaryScores": [
           {
             "score": "agility",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "strength",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -68,11 +68,11 @@
         "primaryScores": [
           {
             "score": "charisma",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "strength",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -82,15 +82,15 @@
         "primaryScores": [
           {
             "score": "agility",
-            "multiplier": 1
+            "ratio": 2
           },
           {
             "score": "fluidIntelligence",
-            "multiplier": 1
+            "ratio": 2
           },
           {
             "score": "perception",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -100,19 +100,19 @@
         "primaryScores": [
           {
             "score": "fluidIntelligence",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "emotionalIntelligence",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "resolve",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "perception",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -122,15 +122,15 @@
         "primaryScores": [
           {
             "score": "strength",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "resolve",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "agility",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -140,15 +140,15 @@
         "primaryScores": [
           {
             "score": "charisma",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "resolve",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "emotionalIntelligence",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -160,7 +160,7 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -170,7 +170,7 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -180,7 +180,7 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -190,7 +190,7 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -200,7 +200,7 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -210,11 +210,11 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "perception",
-            "multiplier": -1
+            "ratio": -1
           }
         ]
       }
@@ -224,7 +224,7 @@
         "primaryScores": [
           {
             "score": "resolve",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -234,7 +234,7 @@
         "primaryScores": [
           {
             "score": "resolve",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -244,11 +244,11 @@
         "primaryScores": [
           {
             "score": "resolve",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "fluidIntelligence",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -258,11 +258,11 @@
         "primaryScores": [
           {
             "score": "resolve",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "charisma",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -272,7 +272,7 @@
         "primaryScores": [
           {
             "score": "resolve",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -282,11 +282,11 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "strength",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -296,11 +296,11 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "coordination",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -310,11 +310,11 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           },
           {
             "score": "strength",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
@@ -324,7 +324,7 @@
         "primaryScores": [
           {
             "score": "vitality",
-            "multiplier": 1
+            "ratio": 1
           }
         ]
       }
